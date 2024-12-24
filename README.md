@@ -13,7 +13,7 @@ Leverages LlamaIndex and CrewAI to showcase how basic questions can be translate
 
 Copy `.env-copy` to `.env` and edit as needed.
 
-Here are some of the models tested:
+Here are some of the [Ollama models](https://ollama.com/library) tested:
 
 * Worked Well:
   * `codellama:13b`
@@ -21,6 +21,7 @@ Here are some of the models tested:
 * Struggled With Questions:
   * `llama3.2:3b`
   * `phi3:14b`
+  * `phi3.5:3.8b`
 
 In general, the smaller models (<3b parameters) seemed to struggle while medium sized (>8b) (and likely larger models) seemed to do much better.
 Code tailored models like `codellama` and others likely have an edge with SQL generation.

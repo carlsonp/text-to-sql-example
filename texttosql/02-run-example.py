@@ -71,6 +71,7 @@ with engine.connect() as con:
 
 sql_database = SQLDatabase(engine, include_tables=["appearances", "club_games", "clubs", "competitions", "game_events", "game_lineups", "games", "player_valuations", "players", "transfers"])
 
+# TODO: look at debugging to see what exact queries are being sent to the model
 # set Logging to DEBUG for more detailed outputs
 table_node_mapping = SQLTableNodeMapping(sql_database)
 table_schema_objs = [
@@ -101,7 +102,7 @@ query_engine = SQLTableRetrieverQueryEngine(
 )
 
 
-
+# TODO: setup a better testing framework here like JSON so we can structure our questions, validated SQL queries, and expected outputs
 for question in ["How many total yellow cards have been given out?",
                  "What player had the most number of total yellow cards?",
                  "What country is Sergio Ramos from?",
