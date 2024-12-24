@@ -1,0 +1,13 @@
+services:
+  texttosql:
+    build:
+      context: ./texttosql/
+      args:
+        DOCKER_BUILDKIT: 1
+    hostname: texttosql
+    volumes:
+      - ./data:/data:rw
+    environment:
+      OLLAMA_URL: ${OLLAMA_URL}
+      OLLAMA_MODEL: ${OLLAMA_MODEL}
+    restart: no
